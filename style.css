@@ -9,3 +9,18 @@
     background-color: aqua;
     margin: 5px;
 }
+
+.hide-girl {
+    animation: hide-girl-animation 1000ms;
+    animation-fill-mode: both;
+}
+
+@keyframes hide-girl-animation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

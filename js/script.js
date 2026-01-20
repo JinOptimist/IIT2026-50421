@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $('.image').click(function(){
-        $(this).css('opacity', 0);
+    $('.image').click(function () {
+        $(this).addClass('hide-girl');
     });
 
 });
