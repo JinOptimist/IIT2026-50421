@@ -5,13 +5,23 @@ $(document).ready(function () {
         $(this).addClass('hide-girl');
     });
 
-    function init(){
+    $('.show').click(function () {
+        $('.image.hide-girl').addClass('show-girl');
+        
+        setTimeout(() => {
+            $('.image').removeClass('show-girl');
+            $('.image').removeClass('hide-girl');
+        }, 1000);
+
+    });
+
+    function init() {
         for (let i = 0; i < 6; i++) {
             createGirl(i + 1);
         }
     }
 
-    function createGirl(index){
+    function createGirl(index) {
         // const div = document.createElement('div')
         const div = $('<div>');
         div.addClass('image');

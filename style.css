@@ -24,8 +24,22 @@
 }
 
 .hide-girl {
-    animation: hide-girl-animation 10000ms;
+    animation: hide-girl-animation 1000ms;
     animation-fill-mode: both;
+}
+
+.show-girl {
+    animation: show-girl-animation 1000ms;
+    animation-fill-mode: both;
+}
+
+.usefull {
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    max-width: 20px;
+    max-height: 20px;
 }
 
 @keyframes hide-girl-animation {
@@ -35,5 +49,15 @@
 
     to {
         height: 0px;
+    }
+}
+
+@keyframes show-girl-animation {
+    from {
+        height: 0px;
+    }
+    
+    to {
+        height: 300px;
     }
 }
