@@ -1,0 +1,57 @@
+body {
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.envelop-container {
+    /* margin-top: 100px;
+    margin-left: 50px; 
+    position: relative; */
+
+    width: 580px;
+    height: 435px;
+    position: absolute;
+    bottom: 200px;
+    overflow: hidden;
+    padding-top: 200px;
+    transition: bottom 2s;
+}
+.envelop-container.open{
+    bottom: 0px;
+}
+
+.envelop {
+    max-width: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.envelop-up {
+    transition: all 2s;
+    transform-origin: top;
+
+    transform: rotateX(0deg);
+}
+
+.open .envelop-up {
+    transform: rotateX(180deg);
+}
+
+.envelop-content {
+    cursor: auto;
+    background-color: brown;
+    width: 100%;
+    z-index: 5;
+
+    top: 200px;
+    transition: all 2s;
+}
+
+.opened.envelop-content {
+    top: -300px;
+}
+
+.girl{
+    max-width: 100%;
+}
