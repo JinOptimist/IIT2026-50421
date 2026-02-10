@@ -2,6 +2,10 @@ $(document).ready(function () {
     const imageUrls = [];
     init();
 
+    $('.card').click(function(){
+        $(this).toggleClass('open');
+    })
+
     function init() {
         fillImageUrls();
         shuffle();

@@ -20,15 +20,36 @@
     height: 300px;
 }
 
+.card-side.cover {
+    transition: all 1s;
+}
+
+.card-side.face {
+    transition: all 1s 1s;
+}
+
+.cover {
+    transform: rotateY(0deg);
+}
+
+.open .cover {
+    transform: rotateY(90deg);
+}
+
+.face {
+    transform: rotateY(90deg);
+}
+
+.open .face {
+    transform: rotateY(0deg);
+}
+
+
 .card img {
     object-fit: cover;
     position: absolute;
     width: 200px;
     height: 300px;
-}
-
-.face {
-    /* display: none; */
 }
 
 .template {
