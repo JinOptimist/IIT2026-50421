@@ -11,6 +11,9 @@
     margin: 10px;
     overflow: hidden;
 }
+.card.finded {
+    opacity: 0.3;
+}
 
 .card-side {
     /* width: 100%;

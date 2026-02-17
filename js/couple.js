@@ -6,11 +6,28 @@ $(document).ready(function () {
     $('.card').click(function () {
         if (openId == undefined) {
             // Если все карточки были закрыты когда мы кликали
-            $(this).toggleClass('open');
+            $(this).addClass('open');
             openId = $(this).attr("data-card-number");
             return;
-        } else {
-            
+        } else { // Если уже была открыта одна карнтинка
+            const card1Id = openId;
+            const card2Id = $(this).attr("data-card-number");
+            $(this).addClass('open');
+
+            setTimeout(() => {
+                if (card1Id == card2Id) {
+                    // Две картинки. Картинки одинаковые
+                    $(`[data-card-number=${card1Id}]`)
+                        .addClass('finded');
+                } else {
+                    // Две картинки .Картинки разные
+                    $(`[data-card-number=${card1Id}]`)
+                        .removeClass('open');
+                    $(`[data-card-number=${card2Id}]`)
+                        .removeClass('open');
+                }
+            }, 2300);
+            openId = undefined;
         }
     })
 
