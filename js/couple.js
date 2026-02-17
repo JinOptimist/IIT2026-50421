@@ -43,6 +43,8 @@ $(document).ready(function () {
     }
 
     function startGame(cardCount) {
+        imageUrls.length = 0;
+        $('.desc .card:not(.template)').remove();
         fillImageUrls(cardCount);
         shuffle();
         drawImages();
