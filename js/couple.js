@@ -1,9 +1,17 @@
 $(document).ready(function () {
+    let openId = undefined;
     const imageUrls = [];
     init();
 
-    $('.card').click(function(){
-        $(this).toggleClass('open');
+    $('.card').click(function () {
+        if (openId == undefined) {
+            // Если все карточки были закрыты когда мы кликали
+            $(this).toggleClass('open');
+            openId = $(this).attr("data-card-number");
+            return;
+        } else {
+            
+        }
     })
 
     function init() {
