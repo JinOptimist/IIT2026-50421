@@ -3,7 +3,14 @@ $(document).ready(function () {
     const imageUrls = [];
     init();
 
-    $('.card').click(function () {
+    $('.card').click(onCardClick);
+
+    $('.start').click(function () {
+        const cardCount = $(this).attr('data-card-count') - 0;
+        startGame(cardCount);
+    });
+
+    function onCardClick() {
         if (openId == undefined) {
             // Если все карточки были закрыты когда мы кликали
             $(this).addClass('open');
@@ -29,12 +36,26 @@ $(document).ready(function () {
             }, 2300);
             openId = undefined;
         }
-    })
+    }
 
     function init() {
-        fillImageUrls();
+
+    }
+
+    function startGame(cardCount) {
+        fillImageUrls(cardCount);
         shuffle();
         drawImages();
+        showAllImagesAndHideThem();
+    }
+
+    function showAllImagesAndHideThem() {
+        setTimeout(() => {
+            $('.card').addClass('open');
+            setTimeout(() => {
+                $('.card').removeClass('open');
+            }, 2200);
+        }, 100);
     }
 
     function drawImages() {
@@ -56,13 +77,14 @@ $(document).ready(function () {
         const indexImageNumber = url.indexOf('.jpg') - 1; // 26
         const imageNumber = url[indexImageNumber]; // 3
         newCard.attr('data-card-number', imageNumber);
+        newCard.click(onCardClick);
 
         $('.desc').append(newCard);
     }
 
-    function fillImageUrls() {
+    function fillImageUrls(cardCount) {
         // Заполняем массив урлами на наши картинки
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < cardCount; i++) {
             const index = i + 1;
             imageUrls.push(`img/wedding/wedding-girl-0${index}.jpg`);
             imageUrls.push(`img/wedding/wedding-girl-0${index}.jpg`);

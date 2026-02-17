@@ -11,6 +11,7 @@
     margin: 10px;
     overflow: hidden;
 }
+
 .card.finded {
     opacity: 0.3;
 }
@@ -24,10 +25,18 @@
 }
 
 .card-side.cover {
-    transition: all 1s;
+    transition: all 1s 1s;
 }
 
 .card-side.face {
+    transition: all 1s;
+}
+
+.open .card-side.cover {
+    transition: all 1s;
+}
+
+.open .card-side.face {
     transition: all 1s 1s;
 }
 
