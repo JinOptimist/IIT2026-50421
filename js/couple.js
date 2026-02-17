@@ -3,7 +3,7 @@ $(document).ready(function () {
     const imageUrls = [];
     init();
 
-    $('.card').click(onCardClick);
+    // $('.card').click(onCardClick);
 
     $('.start').click(function () {
         const cardCount = $(this).attr('data-card-count') - 0;
