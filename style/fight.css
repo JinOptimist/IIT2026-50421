@@ -1,0 +1,48 @@
+body {
+    /* background-color: aqua; */
+    background-image: url(../img/bg/battlefield-01.png);
+}
+
+.batlefield {
+    display: flex;
+    min-width: 1024px;
+    justify-content: space-around;
+}
+
+.hero {
+    background-color: aqua;
+    width: 400px;
+    /* height: 300px; */
+    padding-bottom: 10px;
+}
+
+
+.result {
+    background-color: brown;
+    width: 200px;
+    height: 300px;
+}
+
+
+.enemies {
+    background-color: chocolate;
+    width: 300px;
+    height: 300px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.actions .magic {
+    background-color: beige;
+    width: 190px;
+    height: 200px;
+    margin: 5px;
+}
+
+.info {
+    font-size: 60px;
+}
