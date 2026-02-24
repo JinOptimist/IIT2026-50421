@@ -12,12 +12,9 @@ $(document).ready(function () {
 
     const monsters = [];
     for (let i = 0; i < 5; i++) {
-        let monster = createEnemy();
+        let monster = createEnemy(i + 1);
         monsters.push(monster);
     }
-    
-    // hero.atack(monsters[0]);
-    // monsters[0].atack(hero);
 
     for (let i = 0; i < monsters.length; i++) {
         const monster = monsters[i];
@@ -32,17 +29,19 @@ $(document).ready(function () {
         }
     }
 
-    function createEnemy() {
-        let hpCurrent =  getRandomNumber(10);
+    function createEnemy(index) {
+        let hpCurrent = getRandomNumber(10);
         const nameIndex = getRandomNumber(100);
         let enemy = {
+            id: index,
             name: 'Ivan ' + nameIndex,
             atackPower: 1,
             hpCurrent: hpCurrent,
             hpMax: 10,
             mpCurrent: 10,
             mpMax: 10,
-            atack: Atack
+            atack: Atack,
+            url: `img/monsters/monster${index}.jpg`
         };
 
         return enemy;
