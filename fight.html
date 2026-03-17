@@ -18,7 +18,11 @@
                 /
                 <span class="hp-max">20</span>
             </div>
-            <div class="info mp-container">30/40</div>
+            <div class="info mp-container">
+                <span class="mp-current">10</span>
+                /
+                <span class="mp-max">20</span>
+            </div>
             <div class="actions">
                 <div class="magic magic-air"></div>
                 <div class="magic magic-ground"></div>
@@ -33,14 +37,22 @@
                 <div class="log-record">Action 3</div>
             </div>
 
-            <div class="confirm">БОЛЬШАЯ КНОПКА</div>
+            <div class="fight confirm">БОЛЬШАЯ КНОПКА</div>
         </div>
         <div class="enemies">
-            <img class="enemy" src="img/monsters/monster1.jpg" />
+            <div class="enemy-container template">
+                <div class="stats">
+                    <span>MP:</span><span class="hp-enemy">-50</span>
+                    <span> | HP:</span><span class="mp-enemy">-50</span>
+                </div>
+                <img class="enemy" src="" />
+            </div>
+
+            <!-- <img class="enemy" src="img/monsters/monster1.jpg" />
             <img class="enemy" src="img/monsters/monster2.jpg" />
             <img class="enemy" src="img/monsters/monster3.jpg" />
             <img class="enemy" src="img/monsters/monster4.jpg" />
-            <img class="enemy" src="img/monsters/monster5.jpg" />
+            <img class="enemy" src="img/monsters/monster5.jpg" /> -->
         </div>
     </div>
 </body>

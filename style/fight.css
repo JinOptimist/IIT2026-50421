@@ -29,7 +29,7 @@ body {
 
 .enemies {
     background-color: chocolate;
-    width: 300px;
+    width: 500px;
     height: 100vh;
     overflow: scroll;
 }
@@ -60,4 +60,12 @@ body {
 
 .enemy {
     max-width: 100%;
+}
+
+.template {
+    display: none;
+}
+
+.enemy-container .stats span {
+    font-size: 50px;
 }
