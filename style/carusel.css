@@ -1,0 +1,57 @@
+.carusel {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.block img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.block.small {
+    width: 0;
+    height: 0;
+}
+
+.block.medium {
+    width: 200px;
+    height: 200px;
+}
+
+.block.big {
+    width: 400px;
+    height: 400px;
+}
+
+.move-next .block {
+    transition: all 2s;
+}
+
+.move-next .block-1 {
+    width: 200px;
+    height: 200px;
+}
+
+.move-next .block-2 {
+    width: 400px;
+    height: 400px;
+}
+
+.move-next .block-3 {
+    width: 200px;
+    height: 200px;
+}
+
+.move-next .block-4 {
+    width: 0px;
+    height: 0px;
+}
